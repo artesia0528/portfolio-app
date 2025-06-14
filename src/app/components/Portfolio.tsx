@@ -30,7 +30,8 @@ const PORTFOLIO_DATA = [
       "/Portfolio/P2/6.png",
       "/Portfolio/P2/7.png",
     ],
-    bgGradient: "from-purple-500 to-pink-500"
+    bgGradient: "from-purple-500 to-pink-500",
+    link: "https://visitbesakih.com"
   },
   {
     id: 2,
@@ -47,8 +48,29 @@ const PORTFOLIO_DATA = [
       "/Portfolio/P1/3.png",
       "/Portfolio/P1/4.png",
     ],
-    bgGradient: "from-blue-500 to-teal-500"
+    bgGradient: "from-blue-500 to-teal-500",
+    link: "https://webasesme.com"
   },
+  {
+    id: 3,
+    title: "Bali Herbal Tea",
+    description: "A web application for Bali Herbal Tea, showcasing products and information",
+    stack: [
+      { name: "TypeScript", icon: "SiTypescript", color: "text-blue-600" },
+      { name: "Next.js", icon: "SiNextdotjs", color: "text-black dark:text-white" },
+      { name: "Tailwind CSS", icon: "SiTailwindcss", color: "text-cyan-400" },
+    ],
+    images: [
+      "/Portfolio/P3/1.png",
+      "/Portfolio/P3/2.png",
+      "/Portfolio/P3/3.png",
+      "/Portfolio/P3/4.png",
+      "/Portfolio/P3/5.png",
+      "/Portfolio/P3/6.png",
+    ],
+    bgGradient: "from-green-500 to-lime-500",
+    link: "https://bali-herbal-tea.vercel.app/"
+  }
 ] as const;
 
 const Portfolio: React.FC = () => {
@@ -145,13 +167,16 @@ const Portfolio: React.FC = () => {
         variants={containerVariants}
       >
         {PORTFOLIO_DATA.map((item) => (
-          <motion.div 
+          <motion.a 
             key={item.id} 
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className='
-              group relative bg-white rounded-xl overflow-hidden 
+              block group relative bg-white rounded-xl overflow-hidden 
               hover:shadow-2xl transition-all duration-300 
               dark:bg-[#1a1033] border border-gray-200 dark:border-[#2a1b4d]
-              hover:-translate-y-2
+              hover:-translate-y-2 cursor-pointer
             '
             variants={cardVariants}
             whileHover={{
@@ -224,7 +249,7 @@ const Portfolio: React.FC = () => {
                 ))}
               </motion.div>
             </motion.div>
-          </motion.div>
+          </motion.a>
         ))}
       </motion.div>
       
