@@ -79,19 +79,19 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
         className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'
         variants={fadeInUp}
       >
-        Connect with me
+        Hubungi Saya
       </motion.h2>
       <motion.h2
         className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'
         variants={fadeInUp}
       >
-        Get in touch
+        Kontak
       </motion.h2>
       <motion.p
         className='text-center text-lg mb-2 font-ovo max-w-2xl mx-auto text-gray-600 dark:text-gray-300'
         variants={fadeInUp}
       >
-        I&apos;d love to hear from you! If you have any questions, comments, or feedback, please use the form below
+        Saya sangat senang mendengar dari Anda! Jika Anda memiliki pertanyaan, komentar, atau masukan, silakan isi formulir di bawah ini.
       </motion.p>
 
       <motion.form
@@ -104,7 +104,7 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            placeholder='Enter your name'
+            placeholder='Masukan nama anda'
             type="text"
             required
             className='flex-1 p-3 outline-none rounded-md transition-all
@@ -119,7 +119,7 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder='Enter your email'
+            placeholder='Masukan email anda'
             type="email"
             required
             className='flex-1 p-3 outline-none rounded-md transition-all
@@ -136,7 +136,7 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
           value={formData.message}
           onChange={handleInputChange}
           rows={6}
-          placeholder='Enter your message'
+          placeholder='Masukan pesan anda'
           required
           className='w-full p-4 outline-none rounded-md transition-all
             bg-white dark:bg-[#2a1b47] border 

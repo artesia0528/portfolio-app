@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
       </motion.a>
 
       <ul className='hidden lg:flex items-center gap-8 text-lg font-medium rounded-full px-12 py-3 font-ovo'>
-        {['Home', 'About me', 'Portfolio', 'Experience'].map((item, i) => (
+        {['Home', 'About me', 'Services', 'Portfolio', 'Experience'].map((item, i) => (
           <motion.li
             key={item}
             initial="hidden"

@@ -13,7 +13,7 @@ const PORTFOLIO_DATA = [
   {
     id: 1,
     title: "Visit Besakih",
-    description: "My first fullstack project, a web application for Besakih Temple",
+    description: "Proyek fullstack pertama saya, sebuah aplikasi web untuk Pura Besakih",
     stack: [
       { name: "JavaScript", icon: "FaJs", color: "text-yellow-400" },
       { name: "React", icon: "FaReact", color: "text-blue-500" },
@@ -36,7 +36,7 @@ const PORTFOLIO_DATA = [
   {
     id: 2,
     title: "Web Asesme",
-    description: "A web application for 3P Diagnostics (Potential, Personality and Passion)",
+    description: "Aplikasi web untuk 3P Diagnostics (Potensi, Kepribadian, dan Passion)",
     stack: [
       { name: "TypeScript", icon: "SiTypescript", color: "text-blue-600" },
       { name: "Next.js", icon: "SiNextdotjs", color: "text-black dark:text-white" },
@@ -54,7 +54,7 @@ const PORTFOLIO_DATA = [
   {
     id: 3,
     title: "Bali Herbal Tea",
-    description: "A web application for Bali Herbal Tea, showcasing products and information",
+    description: "Aplikasi web untuk Bali Herbal Tea, menampilkan produk dan informasi",
     stack: [
       { name: "TypeScript", icon: "SiTypescript", color: "text-blue-600" },
       { name: "Next.js", icon: "SiNextdotjs", color: "text-black dark:text-white" },
@@ -154,10 +154,10 @@ const Portfolio: React.FC = () => {
     >
       {/* Section Header */}
       <motion.div variants={itemVariants}>
-        <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>My portfolio</h2>
-        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>My latest work</h2>
+        <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>Portofolio Saya</h2>
+        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>Proyek Terbaru</h2>
         <p className='text-center text-lg mb-2 font-ovo max-w-2xl mx-auto text-gray-600 dark:text-gray-300'>
-          Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development
+          Selamat datang di portofolio pengembangan web saya! Jelajahi koleksi proyek yang menampilkan keahlian saya dalam pengembangan website.
         </p>
       </motion.div>
 

@@ -6,9 +6,9 @@ import { useInView } from 'react-intersection-observer'
 const experiences = [
   {
     company: "BTW Edutech",
-    duration: "March 2024 - July 2024",
-    position: "Frontend Developer Intern",
-    description: "Assisted in developing responsive web applications using React and TypeScript. Collaborated with senior developers to implement new features and improve user interfaces."
+    duration: "Maret 2024 - Juli 2024",
+    position: "Magang Frontend Developer",
+    description: "Membantu dalam pengembangan aplikasi web responsif menggunakan React dan TypeScript. Berkolaborasi dengan developer senior untuk mengimplementasikan fitur baru dan meningkatkan antarmuka pengguna."
   }
 ]
 
@@ -50,10 +50,10 @@ const Experience = () => {
         variants={containerVariants}
       >
         <motion.div variants={itemVariants}>
-          <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>Career Journey</h2>
-          <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>Work Experience</h2>
+          <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>Perjalanan Karier</h2>
+          <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>Pengalaman Kerja</h2>
           <p className='text-center text-lg mb-2 font-ovo max-w-2xl mx-auto text-gray-600 dark:text-gray-300'>
-            My professional path through various organizations and roles
+            Perjalanan profesional saya melalui berbagai organisasi dan peran yang pernah saya jalani.
           </p>
         </motion.div>
 

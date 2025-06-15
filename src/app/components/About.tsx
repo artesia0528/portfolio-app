@@ -10,57 +10,57 @@ const skills = [
   {
     name: "HTML",
     icon: <FaHtml5 className="text-orange-500" size={40} />,
-    description: "The standard markup language for building web pages.",
+    description: "Bahasa markup standar untuk membuat halaman web.",
   },
   {
     name: "CSS",
     icon: <FaCss3Alt className="text-blue-500" size={40} />,
-    description: "Used to style and layout web content.",
+    description: "Digunakan untuk menata tampilan dan tata letak konten web.",
   },
   {
     name: "PHP",
     icon: <FaPhp className="text-indigo-700" size={40} />,
-    description: "A server-side scripting language for web development.",
+    description: "Bahasa pemrograman server-side untuk pengembangan web.",
   },
   {
     name: "JavaScript",
     icon: <FaJs className="text-yellow-400" size={40} />,
-    description: "The main language for adding interactivity to websites.",
+    description: "Bahasa utama untuk menambahkan interaktivitas pada situs web.",
   },
   {
     name: "TypeScript",
     icon: <SiTypescript className="text-blue-600" size={40} />,
-    description: "A typed superset of JavaScript that improves code quality.",
+    description: "Superset JavaScript yang mendukung pengetikan statis untuk kualitas kode yang lebih baik.",
   },
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-cyan-400" size={40} />,
-    description: "A utility-first CSS framework for rapid UI development.",
+    description: "Framework CSS berbasis utility untuk pengembangan UI yang cepat.",
   },
   {
     name: "React JS",
     icon: <FaReact className="text-cyan-300" size={40} />,
-    description: "A JavaScript library for building component-based UIs.",
+    description: "Library JavaScript untuk membangun antarmuka pengguna berbasis komponen.",
   },
   {
     name: "Next JS",
-    icon: <SiNextdotjs className="" size={40} />,
-    description: "A React framework for server-side rendering and static sites.",
+    icon: <SiNextdotjs size={40} />,
+    description: "Framework React untuk rendering sisi server dan pembuatan situs statis.",
   },
   {
-    name: "API Integration",
+    name: "Integrasi API",
     icon: <SiApollographql className="text-pink-500" size={40} />,
-    description: "Connecting and consuming data from external APIs.",
+    description: "Menghubungkan dan mengambil data dari layanan eksternal melalui API.",
   },
   {
     name: "Express JS",
-    icon: <SiExpress className="" size={40} />,
-    description: "A minimalist backend framework for Node.js.",
+    icon: <SiExpress size={40} />,
+    description: "Framework backend minimalis berbasis Node.js.",
   },
   {
     name: "MySQL",
     icon: <SiMysql className="text-blue-500" size={40} />,
-    description: "A popular open-source relational database management system.",
+    description: "Sistem manajemen basis data relasional open-source yang populer.",
   },
 ];
 
@@ -115,18 +115,18 @@ const About = () => {
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      {/* Section Titles */}
+      {/* Judul Section */}
       <motion.div variants={itemVariants}>
-        <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>Introduction</h2>
-        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>About me</h2>
+        <h2 className='text-center text-lg mb-2 font-ovo text-blue-400 dark:text-[#F7374F]'>Perkenalan</h2>
+        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>Tentang Saya</h2>
       </motion.div>
 
-      {/* About Content */}
+      {/* Konten Tentang Saya */}
       <motion.div 
         className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'
         variants={containerVariants}
       >
-        {/* Profile Image */}
+        {/* Gambar Profil */}
         <motion.div 
           className='
             aspect-square 
@@ -141,32 +141,25 @@ const About = () => {
             border-white/20 
             dark:border-[#3a2b5d]
           '
-          style={{ 
-            backgroundImage: `url(/ImageP.jpg)` // pastikan nama file benar
-          }}
+          style={{ backgroundImage: `url(/ImageP.jpg)` }}
           variants={itemVariants}
           whileHover={{ scale: 1.02 }}
         />
-        {/* Bio Text */}
-        <motion.div 
-          className='flex-1'
-          variants={containerVariants}
-        >
-          <motion.p 
-            className='text-lg text-justify font-ovo'
-            variants={itemVariants}
-          >
-            I am a front-end developer with a passion for creating beautiful and functional web applications. I have experience in HTML, CSS, JavaScript, TailwindCSS and React, and I am always eager to learn new technologies and improve my skills.
+        
+        {/* Deskripsi Diri */}
+        <motion.div className='flex-1' variants={containerVariants}>
+          <motion.p className='text-lg text-justify font-ovo' variants={itemVariants}>
+            Saya awalnya adalah seorang pengembang antarmuka (Front-End Developer) yang memiliki ketertarikan besar dalam menciptakan aplikasi web yang menarik dan fungsional. Saya memiliki pengalaman dalam menggunakan HTML, CSS, JavaScript, TailwindCSS, dan React.
           </motion.p>
-          
-          <motion.p 
-            className='text-lg text-justify font-ovo mt-5'
-            variants={itemVariants}
-          >
-            In my free time, I love to explore go to the gym, read books, and spend time with my family and friends.
+          <motion.p className='text-lg text-justify font-ovo mt-5' variants={itemVariants}>
+            Saat ini, saya sedang memplajari back-end development dengan Node.js, Express, dan MongoDB. Saya percaya bahwa pemahaman yang baik tentang kedua sisi pengembangan (front-end dan back-end) akan membantu saya menjadi pengembang yang lebih baik dan mampu menciptakan aplikasi web yang lebih kompleks.
           </motion.p>
 
-          {/* Education Card */}
+          <motion.p className='text-lg text-justify font-ovo mt-5' variants={itemVariants}>
+            Di waktu luang, saya senang pergi ke gym, membaca buku, serta menghabiskan waktu bersama keluarga dan teman-teman.
+          </motion.p>
+
+          {/* Kartu Pendidikan */}
           <motion.div
             className='border-[0.5px] border-gray-400 dark:border-[#ECEFCA] rounded-xl p-6 cursor-pointer mt-6'
             variants={itemVariants}
@@ -176,17 +169,17 @@ const About = () => {
             }}
           >
             <GraduationCap className='my-4 font-semibold' />
-            <h3 className='font-semibold my-4 text-gray-700 dark:text-[#b8bb9c] font-ovo'>Education</h3>
+            <h3 className='font-semibold my-4 text-gray-700 dark:text-[#b8bb9c] font-ovo'>Pendidikan</h3>
             <p className='text-sm text-gray-600 dark:text-[#b8bb9c] font-ovo'>
-              I am graduated at the ITB STIKOM Bali, majoring in Information Technology. I have gained a solid foundation in programming, algorithms, and software development.
+              Saya merupakan lulusan dari ITB STIKOM Bali dengan jurusan Teknologi Informasi. Selama masa studi, saya mendapatkan dasar yang kuat dalam pemrograman, algoritma, dan pengembangan perangkat lunak.
             </p>
           </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* Skills Section */}
+      {/* Bagian Keahlian */}
       <motion.div variants={itemVariants}>
-        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>My skills</h2>
+        <h2 className='text-center text-5xl font-ovo mb-2 font-bold dark:text-[#ECEFCA]'>Keahlian Saya</h2>
       </motion.div>
 
       <motion.div 
@@ -202,7 +195,6 @@ const About = () => {
               scale: 1.05,
               backgroundColor: 'rgba(255,255,255,0.15)'
             }}
-            custom={index}
           >
             <div className="flex items-center mb-4 gap-3">
               {skill.icon}

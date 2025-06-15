@@ -62,7 +62,7 @@ const Header: React.FC = () => {
       animate={controls}
       variants={containerVariants}
     >
-      {/* Profile Image with Pop-in Animation */}
+      {/* Gambar Profil dengan Animasi Pop-in */}
       <motion.div
         className='rounded-full max-w-none bg-cover bg-center mt-20 shadow-lg border-4 border-white/20 dark:border-[#3a2b5d]'
         style={{ 
@@ -73,31 +73,33 @@ const Header: React.FC = () => {
         variants={scaleVariants}
       />
 
-      {/* Greeting Text with Fade-up Animation */}
+      {/* Salam Pembuka */}
       <motion.h3 
         className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
         variants={itemVariants}
       >
-        Hallo! I&apos;m Krisna Aditya
+        Halo! Saya Krisna Aditya
       </motion.h3>
 
-      {/* Main Headline with Staggered Animation */}
+      {/* Headline Utama */}
       <motion.p 
         className='gap-2 text-3xl md:text-4xl mb-3 font-ovo'
         variants={itemVariants}
       >
-        I&apos;m a <span className='text-blue-400 dark:text-[#F7374F]'>front-end developer</span> who enjoys designing and building web applications
+        Saya seorang <span className='text-blue-400 dark:text-[#F7374F]'>Web Developer</span> dan Freelancer
       </motion.p>
 
-      {/* Description with Fade Animation */}
+      {/* Deskripsi */}
       <motion.p 
         className='text-lg font-ovo max-w-2xl'
         variants={itemVariants}
       >
-        Explore my work, skills, and projects as a passionate Front End Developer focused on building responsive, modern web experiences
+        Saya senang merancang dan membangun aplikasi web modern yang responsif. 
+        Dengan semangat tinggi terhadap teknologi, saya berfokus pada pengalaman pengguna 
+        yang optimal, tampilan yang menarik, dan performa yang efisien.
       </motion.p>
 
-      {/* Resume Button with Bounce Animation */}
+      {/* Tombol Resume */}
       <motion.div
         className='flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full hover:bg-white/10 hover:shadow-md transition-all'
         variants={itemVariants}
@@ -112,7 +114,7 @@ const Header: React.FC = () => {
             whileHover={{ x: 2 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            My Resume
+            Unduh CV Saya
           </motion.p>
           <motion.span
             animate={{
