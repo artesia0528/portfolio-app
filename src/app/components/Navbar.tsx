@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
   if (!isClient) return null;
 
   return (
-    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 font-outfit backdrop-blur-md bg-white/80 dark:bg-[#210F37]/90 border-b border-gray-200 dark:border-[#3d2a5f]'>
+    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 font-outfit backdrop-blur-md '>
       <motion.a 
         href="#top" 
         className='flex items-center group'

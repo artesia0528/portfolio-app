@@ -2,6 +2,7 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface FormData {
   name: string;
@@ -19,45 +20,41 @@ const Contact = () => {
   const [result, setResult] = useState<string>('');
   const [success, setSuccess] = useState<boolean>(false);
 
-
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
-  setLoading(true);
-  setSuccess(false); // Reset success state saat mulai submit
-  setResult("Sending...");
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setResult("Sending...");
 
-  try {
-    const formData = new FormData(event.currentTarget);
+    try {
+      const formData = new FormData(event.currentTarget);
 
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      body: formData,
-    });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
 
-    const data = await response.json();
-    if (data.success) {
-      setSuccess(true); // ✅ Success trigger untuk animasi ikon
-      setResult("Form Submitted Successfully");
-      setFormData({ name: '', email: '', message: '' });
-
-      // Optional: Reset `success` setelah beberapa detik
-      setTimeout(() => setSuccess(false), 3000);
-    } else {
-      setResult(data.message || "Something went wrong.");
+      const data = await response.json();
+      if (data.success) {
+        setSuccess(true);
+        setResult("Form Submitted Successfully");
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSuccess(false), 3000);
+      } else {
+        setResult(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error(error);
+      setResult("Failed to submit form. Please try again.");
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    console.error(error);
-    setResult("Failed to submit form. Please try again.");
-  } finally {
-    setLoading(false);
-  }
-};
-
+  };
 
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
@@ -146,6 +143,7 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
             focus:ring-2 focus:ring-blue-500 dark:focus:ring-[#7c5fb9]
             focus:border-transparent mb-6'
         />
+
         <motion.button
           type="submit"
           disabled={loading}
@@ -156,7 +154,6 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
           whileTap={{ scale: 0.95 }}
         >
           {loading ? 'Sending...' : success ? 'Sent!' : 'Submit'}
-
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -167,8 +164,8 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
               loading
                 ? { rotate: 360 }
                 : success
-                ? { scale: [1, 1.3, 1] } // animasi kecil setelah berhasil
-                : { x: [0, 4, 0] } // idle animation
+                ? { scale: [1, 1.3, 1] }
+                : { x: [0, 4, 0] }
             }
             transition={{
               duration: loading ? 1 : 1.5,
@@ -184,6 +181,23 @@ const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
             />
           </motion.svg>
         </motion.button>
+
+        {/* Tombol WhatsApp */}
+        <motion.a
+          href={`https://wa.me/6285162560528?text=${encodeURIComponent(
+            'Halo, saya tertarik dengan jasa pembuatan website Anda.'
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className='w-max mx-auto mt-4 py-3 px-8 bg-green-500 hover:bg-green-600 text-white font-bold rounded-full text-center transition-colors duration-300 flex items-center justify-center gap-2'
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <p>Hubungi via WhatsApp</p> 
+          <FaWhatsapp />
+        </motion.a>
+
+        {/* Result Text */}
         {result && (
           <motion.p
             initial={{ opacity: 0 }}

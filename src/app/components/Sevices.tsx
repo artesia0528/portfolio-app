@@ -31,7 +31,7 @@ const Services = () => {
         "Direct WhatsApp chat",
         "Free SEO optimization",
         "1 email bisnis",
-        "1 GB Disk storage",
+        "SSD storage",
         "Free SSL",
         "Gratis revisi 2x",
         "Gratis maintenance 1 bulan",
@@ -46,12 +46,12 @@ const Services = () => {
       price: "Rp 1.250.000",
       features: [
         "Free domain",
-        "Free hosting 1 tahun",
+        "Shared hosting",
         "Desain responsive (Mobile & Desktop)",
         "Direct WhatsApp chat",
         "Free SEO optimization",
         "3 email bisnis",
-        "5 GB Disk storage",
+        "SSD storage",
         "Free SSL",
         "Gratis revisi 3x",
         "Gratis maintenance 2 bulan",
@@ -322,19 +322,55 @@ const Services = () => {
               {
                 title: "Maintenance Website",
                 description: "Perawatan berkala untuk menjaga website Anda tetap optimal",
-                price: "Rp 200.000/bulan",
+                price: "Rp 200.000 / bulan",
                 icon: <Check className="w-5 h-5 text-green-500" />
               },
               {
                 title: "Optimasi SEO Lanjutan",
                 description: "Meningkatkan peringkat website di mesin pencari",
-                price: "Rp 500.000/bulan",
+                price: "Rp 500.000 / bulan",
                 icon: <Check className="w-5 h-5 text-green-500" />
               },
               {
                 title: "Konten Berkala",
                 description: "Pembuatan artikel/blog untuk website Anda",
-                price: "Rp 100.000/artikel",
+                price: "Rp 100.000 / artikel",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Penambahan Animasi Interaktif",
+                description: "Animasi menarik menggunakan framer-motion atau GSAP",
+                price: "Rp 300.000 / halaman",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Integrasi WhatsApp / Chat",
+                description: "Tombol WhatsApp & integrasi live chat seperti Tawk.to",
+                price: "Rp 150.000 / integrasi",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Formulir Kontak Kustom",
+                description: "Form dinamis dengan validasi & pengiriman ke email/WhatsApp",
+                price: "Rp 200.000 / form",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Google Analytics & Search Console",
+                description: "Integrasi pelacakan performa website",
+                price: "Rp 150.000 / setup",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Pembuatan Landing Page Promo",
+                description: "Landing page untuk campaign promosi & produk",
+                price: "Rp 500.000 / halaman",
+                icon: <Check className="w-5 h-5 text-green-500" />
+              },
+              {
+                title: "Perbaikan Bug / Error",
+                description: "Mengatasi bug ringan pada website yang berjalan",
+                price: "Mulai dari Rp 100.000",
                 icon: <Check className="w-5 h-5 text-green-500" />
               }
             ].map((service, index) => (
@@ -347,7 +383,7 @@ const Services = () => {
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 * index }}
+                transition={{ delay: 0.1 * index }}
                 viewport={{ once: true }}
               >
                 <motion.h4 
@@ -387,11 +423,11 @@ const Services = () => {
             Pertanyaan Umum
           </motion.h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 question: "Berapa lama waktu pengerjaan website?",
-                answer: "Waktu pengerjaan tergantung pada paket yang dipilih. Paket Basic biasanya selesai dalam 3-5 hari kerja, Standard 5-7 hari kerja, dan Premium 7-14 hari kerja."
+                answer: "Waktu pengerjaan tergantung pada paket yang dipilih. Paket Basic biasanya selesai dalam 4-7 hari kerja, Standard 5-9 hari kerja, dan Premium 7-14 hari kerja."
               },
               {
                 question: "Apakah saya bisa request fitur khusus?",
@@ -400,11 +436,11 @@ const Services = () => {
               {
                 question: "Bagaimana proses pembayarannya?",
                 answer: "Pembayaran dilakukan dengan DP 50% di awal sebelum pengerjaan dimulai, dan pelunasan 50% setelah website selesai dan disetujui."
-              },
-              {
-                question: "Apakah website saya bisa diubah nantinya?",
-                answer: "Ya, Anda akan mendapatkan akses admin untuk mengubah konten website. Kami juga menyediakan video panduan dan training penggunaan."
               }
+              // {
+              //   question: "Apakah website saya bisa diubah nantinya?",
+              //   answer: "Ya, Anda akan mendapatkan akses admin untuk mengubah konten website. Kami juga menyediakan video panduan dan training penggunaan."
+              // }
             ].map((faq, index) => (
               <motion.div 
                 key={index}

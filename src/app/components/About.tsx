@@ -141,7 +141,7 @@ const About = () => {
             border-white/20 
             dark:border-[#3a2b5d]
           '
-          style={{ backgroundImage: `url(/ImageP.jpg)` }}
+          style={{ backgroundImage: `url(/p2.jpg)` }}
           variants={itemVariants}
           whileHover={{ scale: 1.02 }}
         />

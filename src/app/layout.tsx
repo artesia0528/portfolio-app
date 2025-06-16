@@ -3,6 +3,7 @@ import ThemeProvider from "./components/theme-provider";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 
+
 const outfitFont = Outfit({
   variable: "--font-outfit",
   weight: ["400", "500", "600", "700"],
