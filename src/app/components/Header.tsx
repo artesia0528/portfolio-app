@@ -30,19 +30,6 @@ const Header: React.FC = () => {
     },
   }
 
-  const textGlowVariants = {
-    hidden: { textShadow: '0 0 0px rgba(59, 130, 246, 0)' },
-    visible: {
-      textShadow:
-        '0 0 10px rgba(59, 130, 246, 0.7), 0 0 20px rgba(59, 130, 246, 0.5)',
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: 'reverse',
-      },
-    },
-  }
-
   return (
     <div id="home" className="relative w-full min-h-[100dvh] pt-44 overflow-hidden px-4">
       {/* Gradient Overlay */}
@@ -62,7 +49,7 @@ const Header: React.FC = () => {
         >
           <motion.span
             className="block text-blue-500 dark:text-[#F7374F] mb-2"
-            variants={textGlowVariants}
+            variants={itemVariants}
           >
             Jasa Pembuatan Website Profesional
           </motion.span>
