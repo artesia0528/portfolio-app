@@ -10,6 +10,7 @@ type PackageKey = 'basic' | 'standard' | 'premium';
 interface Package {
   name: string;
   price: string;
+  note: string; 
   features: string[];
   recommended: boolean;
   icon: React.ReactNode;
@@ -22,24 +23,25 @@ const Services = () => {
   // Definisikan objek packages dengan tipe yang jelas
   const packages: Record<PackageKey, Package> = {
     basic: {
-      name: "Paket Basic",
-      price: "Rp 755.000",
+      name: 'Paket Basic',
+      price: 'Rp 755.000',
       features: [
-        "Free domain",
-        "Shared hosting",
-        "Desain responsive (Mobile & Desktop)",
-        "Direct WhatsApp chat",
-        "Free SEO optimization",
-        "1 email bisnis",
-        "SSD storage",
-        "Free SSL",
-        "Gratis revisi 2x",
-        "Gratis maintenance 1 bulan",
-        "Source code",
-        "Video panduan"
+        'Free domain',
+        'Shared hosting',
+        'Desain responsive (Mobile & Desktop)',
+        'Direct WhatsApp chat',
+        'Free SEO optimization',
+        '1 email bisnis',
+        'SSD storage',
+        'Free SSL',
+        'Gratis revisi 2x',
+        'Gratis maintenance 1 bulan',
+        'Source code',
+        'Video panduan'
       ],
+      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       recommended: false,
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
+      note: 'Cocok untuk landing page, portofolio, dan website statis.',
     },
     standard: {
       name: "Paket Standard",
@@ -59,7 +61,8 @@ const Services = () => {
         "Video panduan"
       ],
       recommended: true,
-      icon: <Star className="w-6 h-6 text-yellow-500" />
+      icon: <Star className="w-6 h-6 text-yellow-500" />,
+      note: 'Cocok untuk website dinamis ringan (SSG) berbasis Next.js/Vue.',
     },
     premium: {
       name: "Paket Premium",
@@ -71,7 +74,7 @@ const Services = () => {
         "Direct WhatsApp chat",
         "Free SEO optimization",
         "5 email bisnis",
-        "50 GB Disk storage",
+        "SSD storage",
         "Request fitur khusus",
         "Free SSL",
         "Gratis revisi 5x",
@@ -80,7 +83,8 @@ const Services = () => {
         "Video panduan"
       ],
       recommended: false,
-      icon: <Zap className="w-6 h-6 text-purple-500" />
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      note: 'Cocok untuk aplikasi kompleks dengan fitur custom dan SSR.',
     }
   };
 
@@ -247,13 +251,21 @@ const Services = () => {
                   
                   <div className="mb-6">
                     <motion.div 
-                      className="text-3xl font-bold text-gray-800 dark:text-white mb-1"
+                      className="text-3xl font-bold text-gray-800 dark:text-white mb-4"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
                       {pkg.price}
                     </motion.div>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.6 }}
+                      className="text-sm text-gray-400 mb-4"
+                    >
+                      {pkg.note}
+                    </motion.p>
                     <motion.p 
                       className="text-gray-500 dark:text-gray-400 text-sm"
                       initial={{ opacity: 0 }}
