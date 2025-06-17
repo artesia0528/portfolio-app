@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { FaHtml5, FaCss3Alt, FaPhp, FaJs, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaPhp, FaJs, FaReact, FaWordpress } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiMysql, SiExpress, SiApollographql } from "react-icons/si";
 import { GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -26,6 +26,11 @@ const skills = [
     name: "JavaScript",
     icon: <FaJs className="text-yellow-400" size={40} />,
     description: "Bahasa utama untuk menambahkan interaktivitas pada situs web.",
+  },
+  {
+    name: "WordPress",
+    icon: <FaWordpress className='text-sky-400' size={40} />,
+    description: "Sistem manajemen konten (CMS) yang populer untuk membuat situs web.",
   },
   {
     name: "TypeScript",
